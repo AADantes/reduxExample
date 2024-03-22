@@ -11,22 +11,15 @@ const initialState ={
             firstname:'Lhance'
         },
 
-    ],
-
-    books: [
-        {
-            id: 1,
-            bookname: 'One Piece',
-            description: 'Shonen',
-            status: 'AVAILABLE'
-        }
     ]
+
+ 
 }
 
 export const LibraryReducers = (state=initialState, {type,payload}) => {
  switch (type) {
     case ActionTypes.SET_STUDENTS:
-        return (state, payload);
+        return {...state,students:payload};
 
     default:
         return state;

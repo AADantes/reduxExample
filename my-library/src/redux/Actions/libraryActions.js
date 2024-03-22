@@ -1,4 +1,4 @@
-import { ActionTypes } from "../Constants/action-types";
+import { ActionTypes } from "../Constants/Action-types";
 
 export const setStudent = (students) => {
     return{
@@ -7,4 +7,5 @@ export const setStudent = (students) => {
         payload: students,
 
 };
+
 }

@@ -18,23 +18,19 @@ export default function DisplayStudent() {
       </thead>
 
       <tbody>
-
         {
           students.map((students) => {
             return(
-
-              <tr key = {students.id}>
-              <td>{students.id}</td>
-              <td>{students.firstname}</td>
-              <td>{students.lastname}</td>
-              <td>Actions</td>
+              <tr key={students.id}>
+                <td>{students.id}</td>
+                <td>{students.firstname}</td>
+                <td>{students.lastname}</td>
+                <td>Actions</td>
             </tr>
             )
     })
 
-  }
-
-
+        }
       </tbody>
 
   </table>
