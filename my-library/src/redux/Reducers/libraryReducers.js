@@ -1,30 +1,34 @@
-import { ActionTypes } from "../Constants/action-types";
 
-const initialState = {
-students:[ 
+import{ActionTypes} from "../Constants/Action-types";
 
-    {
-        id:1,
-        lastname:'Dantes',
-        firstname:'Allan'
-    },
+import React from 'react'
 
-    {
-        id:2,
-        lastname:'Cruz',
-        firstname:'Jerwin'
-    }
+const initialState ={
+    students: [
+        {
+            id: 1,
+            lastname: 'Ponce',
+            firstname:'Lhance'
+        },
 
-]
+    ],
 
+    books: [
+        {
+            id: 1,
+            bookname: 'One Piece',
+            description: 'Shonen',
+            status: 'AVAILABLE'
+        }
+    ]
 }
 
-export const libraryReducer = (state=initialState, {type,payload}) =>
-{
-    switch (type){
-        case ActionTypes.SET_STUDENTS:
-        return {...state,students:payload};
-        default:
+export const LibraryReducers = (state=initialState, {type,payload}) => {
+ switch (type) {
+    case ActionTypes.SET_STUDENTS:
+        return (state, payload);
+
+    default:
         return state;
-    }
+  }
 }
