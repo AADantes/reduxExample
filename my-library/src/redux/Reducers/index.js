@@ -1,9 +1,13 @@
-import { combineReducers} from 'redux';
-import {libraryReducer} from './libraryReducers';
+import {combineReducers} from 'redux';
+import {LibraryReducers,selectedstudentreducer} from './LibraryReducers';
+import {BookReducers} from './BookReducers';
+
 
 const reducers = combineReducers({
-    allStudents:libraryReducer,
+    allStudents:LibraryReducers,
+    allBooks:BookReducers,
+    singlestudent:selectedstudentreducer
 
-});
+})
 
 export default reducers;

@@ -1,30 +1,46 @@
-import { ActionTypes } from "../Constants/action-types";
 
-const initialState = {
-students:[ 
+import{ActionTypes} from "../Constants/Action-types";
 
-    {
-        id:1,
-        lastname:'Dantes',
-        firstname:'Allan'
-    },
+import React from 'react'
 
-    {
-        id:2,
-        lastname:'Cruz',
-        firstname:'Jerwin'
-    }
+const initialState ={
+    students: [
+        {
+            id: 1,
+            lastname: 'Ponce',
+            firstname:'Lhance',
+            status:'Active'
+        },
 
-]
+    ]
 
+ 
 }
-
-export const libraryReducer = (state=initialState, {type,payload}) =>
-{
-    switch (type){
-        case ActionTypes.SET_STUDENTS:
+    const singlestudentinitialize ={
+        id: '',
+        lastname:'',
+        firstname:'',
+        status:'Active'
+    }
+    
+export const LibraryReducers = (state=initialState, {type,payload}) => {
+ switch (type) {
+    case ActionTypes.SET_STUDENTS:
         return {...state,students:payload};
-        default:
+
+    default:
         return state;
-    }
+    
+  }
 }
+
+
+    export const selectedstudentreducer=(state=singlestudentinitialize,{type,payload})=>{
+        switch (type) {
+            case ActionTypes.SELECTED_STUDENT:
+                return {...state,...payload};
+        
+            default:
+                return state;
+    }
+    }
