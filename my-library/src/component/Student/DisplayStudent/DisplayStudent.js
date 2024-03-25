@@ -52,18 +52,26 @@ export default function DisplayStudent() {
 
       <tbody>
         {
+<<<<<<< HEAD
           students.filter((student)=>student.state!='REMOVED').map((students) => {
+=======
+          students.map((students) => {
+>>>>>>> a1b2ae6c45532b58059aa36070d9b51575ed36f8
             return(
               <tr key={students.id}>
                 <td>{students.id}</td>
                 <td>{students.firstname}</td>
                 <td>{students.lastname}</td>
+<<<<<<< HEAD
                 <td>
 
                   <button onClick={() => GetStudentId(students.id)}>Edit</button>
                   &nbsp;
                   <button onClick={() => GetRemoveId(students.id)}>Delete</button>
                 </td>
+=======
+                <td>Actions</td>
+>>>>>>> a1b2ae6c45532b58059aa36070d9b51575ed36f8
             </tr>
             )
     })

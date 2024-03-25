@@ -8,6 +8,7 @@ export const setStudent = (students) => {
 
 };
 
+<<<<<<< HEAD
 }
 
 export const setSelectedStudent = (students) => {
@@ -16,4 +17,6 @@ export const setSelectedStudent = (students) => {
         type: ActionTypes.SELECTED_STUDENT,
         payload: students,
     }
+=======
+>>>>>>> a1b2ae6c45532b58059aa36070d9b51575ed36f8
 }

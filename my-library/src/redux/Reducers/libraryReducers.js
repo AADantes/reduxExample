@@ -8,6 +8,7 @@ const initialState ={
         {
             id: 1,
             lastname: 'Ponce',
+<<<<<<< HEAD
             firstname:'Lhance',
             status:'Active'
         },
@@ -44,3 +45,22 @@ export const LibraryReducers = (state=initialState, {type,payload}) => {
                 return state;
     }
     }
+=======
+            firstname:'Lhance'
+        },
+
+    ]
+
+ 
+}
+
+export const LibraryReducers = (state=initialState, {type,payload}) => {
+ switch (type) {
+    case ActionTypes.SET_STUDENTS:
+        return {...state,students:payload};
+
+    default:
+        return state;
+  }
+}
+>>>>>>> a1b2ae6c45532b58059aa36070d9b51575ed36f8
